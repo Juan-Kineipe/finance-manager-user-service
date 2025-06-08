@@ -1,0 +1,22 @@
+server:
+  port: 81
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+
+cors:
+  originPatterns: http://localhost:4200,http://localhost:8080
+
+security:
+  jwt:
+    token:
+      secret-key: ${SECRET_KEY}
